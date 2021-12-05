@@ -1,0 +1,28 @@
+
+img {
+  margin-top: -80px;
+  width: 1569px;
+}
+
+@media screen and (min-width:1440px) {
+  .bg-main {
+    margin: auto;
+    width: 100%;
+    max-width: 1569px;
+  }
+
+  img {
+    margin-left: auto;
+  }
+
+}
+@media screen and (max-width:1366px) {
+  .bg-main {
+    overflow: hidden;
+
+    img {
+      margin-left: -110px;
+    }
+  }
+}
+
