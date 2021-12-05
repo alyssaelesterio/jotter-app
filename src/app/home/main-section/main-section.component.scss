@@ -1,14 +1,52 @@
 
-span {
-  color: #E0563B;
-}
-
-
 .bg-main {
   img {
     margin-top: -80px;
     width: 1569px;
   }
+
+  border:1px solid purple;
+}
+
+.bg-body {
+  margin:auto;
+  padding: 0 20px;
+  top:-525px;
+  position: relative;
+  display: flex;
+  border:1px solid black;
+  color: #fff;
+  font-family: 'Bahnschrift', sans-serif;
+  align-items: center;
+
+  img {
+    width: 774px;
+  }
+
+  div {
+    top: -30px;
+    position: relative;
+  }
+
+  h1, p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 10px;
+    text-align: right;
+  }
+
+  .spiel {
+    margin-top: 60px;
+  }
+  p {
+    font-size: 25px;
+  }
+
+}
+
+span {
+  color: #E0563B;
 }
 
 
