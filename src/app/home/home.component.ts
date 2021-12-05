@@ -9,30 +9,18 @@ import { MainSectionComponent } from './main-section/main-section.component';
 })
 export class HomeComponent implements OnInit {
   sticky: boolean = false;
-  menuPosition: any;
-  elementPosition: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
   @ViewChild('stickyMenu') menuElement: ElementRef;
-
-
-  ngAfterViewInit(){
-    this.elementPosition = this.menuElement.nativeElement.offsetTop;
-  }
 
 
   @HostListener('window:scroll', ['$event'])
     handleScroll(){
-      const windowScroll = window.pageYOffset;
-      console.log(windowScroll, this.elementPosition);
-      if(windowScroll >= 97){
-        this.sticky = true;
-      } else {
-        this.sticky = false;
-      }
+      this.sticky = window.pageYOffset >= 97;
     }
 }
