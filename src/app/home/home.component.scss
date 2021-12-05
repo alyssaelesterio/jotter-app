@@ -1,12 +1,28 @@
-// #home {
-//   overflow:hidden;
-//   z-index: 1;
-//   margin-top: -90px;
-// }
+
+#home {
+  position: relative;
+  top: -97px;
+  z-index: -11;
+}
+
+.navbar{
+  height: 97px;
+  box-sizing: border-box;
+  background:transparent;
+  z-index: 999;
+  position: relative;
+  width:100%;
+
+}
 
 
-#navbar{
-  height: 90px;
-  z-index: 2;
-  border:1px solid salmon;
+.sticky{
+  top: 0;
+  position: fixed;
+  overflow: hidden;
+  background-color: #233B55;
+}
+
+#sectionA{
+  height:800px;
 }

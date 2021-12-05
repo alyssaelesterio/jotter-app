@@ -1,14 +1,16 @@
-<!-- <div id="navbar">
-  <app-navbar></app-navbar>
-</div> -->
+<div class="navbar" #stickyMenu [class.sticky] = "sticky">
+  <app-navbar ></app-navbar>
+</div>
 
-
-<app-main-section id="home"></app-main-section>
+<div id="home">
+  <app-main-section ></app-main-section>
+</div>
 
 
 <br>
 <hr>
-<div>Section A</div>
+
+<div id="sectionA">Section A</div>
 <div>Section B</div>
 <div>Section C</div>
 <div>Footer</div>

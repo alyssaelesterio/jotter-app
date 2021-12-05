@@ -1,5 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global
+$secondaryColor = #E0563B;
+styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+
+$primaryFont: 'Roboto', sans-serif;
+$specialFont:'Bahnschrift', sans-serif;
+
+$color3 : #E0563B;
+
+
 body {
   margin: 0;
   padding: 0;
+  font-family: $primaryFont;
+  background-color: beige;
+  font-weight: 300;
 }
