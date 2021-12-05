@@ -9,6 +9,7 @@ nav {
   color: #fff;
   display: flex;
   align-items: center;
+  margin:auto;
 
   div {
     width: 30%;
@@ -43,3 +44,8 @@ nav {
 }
 
 
+@media screen and (min-width: 1367px){
+  nav{
+    max-width: 1250px;
+  }
+}
