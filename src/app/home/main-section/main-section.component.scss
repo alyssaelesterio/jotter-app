@@ -5,16 +5,15 @@
     width: 1569px;
   }
 
-  border:1px solid purple;
 }
 
 .bg-body {
-  margin:auto;
-  padding: 0 20px;
   top:-525px;
+  padding: 0 20px;
+  margin:auto;
+  width: 1366px;
   position: relative;
   display: flex;
-  border:1px solid black;
   color: #fff;
   font-family: 'Bahnschrift', sans-serif;
   align-items: center;
@@ -32,7 +31,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 55px;
-    line-height: 10px;
+    line-height: 20px;
     text-align: right;
   }
 
@@ -41,6 +40,7 @@
   }
   p {
     font-size: 25px;
+    line-height: 10px;
   }
 
 }

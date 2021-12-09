@@ -1,18 +1,11 @@
-#home {
-  position: relative;
-  top: -97px;
-  z-index: -11;
-}
-
 .navbar{
-  height: 97px;
+  height: 95px;
   box-sizing: border-box;
   background:transparent;
   z-index: 999;
   position: relative;
   width:100%;
 }
-
 
 .sticky{
   top: 0;
@@ -21,6 +14,21 @@
   background-color: #233B55;
 }
 
+#home {
+  height: 600px;
+}
+
+.main-section {
+  position: relative;
+  top: -95px;
+  z-index: -11;
+}
+
 #sectionA{
   height:800px;
+  background-color: aqua;
+}
+
+#sectionB {
+  background-color: red;
 }
