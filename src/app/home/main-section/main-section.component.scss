@@ -8,18 +8,19 @@
 }
 
 .bg-body {
-  top:-525px;
+  top:-505px;
   padding: 0 20px;
   margin:auto;
-  width: 1366px;
+  max-width: 1366px;
   position: relative;
   display: flex;
   color: #fff;
   font-family: 'Bahnschrift', sans-serif;
   align-items: center;
-
+  overflow: hidden;
+  box-sizing: border-box;
   img {
-    width: 774px;
+    width: 750px;
   }
 
   div {
