@@ -1,1 +1,32 @@
-<p>login works!</p>
+<div class="container">
+    <h1>Sign in to Jotter</h1>
+
+    <div class="login-icons">
+        <button (click)="test()"><img src="assets/images/Google Icon.png" alt=""></button>
+        <button><img src="assets/images/Facebook Icon.png" alt=""></button>
+        <button><img src="assets/images/Twitter Icon.png" alt=""></button>
+    </div>
+
+    <p class="login-option-spiel">or use your email</p>
+
+    <form>
+        <div class="field">
+            <span>
+                <img src="assets/images/Email Icon.png" alt="">
+                <input type="text" placeholder="Username/Email" id="email">
+            </span>
+        </div>
+        
+        <div class="field">
+            <span>
+                <img src="assets/images/Password Icon.png" alt="">
+                <input type="password" placeholder="Password">
+            </span>
+        </div>
+
+        <a href="">Forgot Password?</a>
+
+        <br><br><br>
+        <button id="sign-in">SIGN IN</button>
+    </form>
+</div>

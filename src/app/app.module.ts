@@ -30,7 +30,7 @@ import { EnrollComponent } from './access/login-enroll/enroll/enroll.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
