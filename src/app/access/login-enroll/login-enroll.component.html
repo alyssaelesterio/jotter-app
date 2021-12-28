@@ -4,19 +4,27 @@
     </div> -->
     <div class="box">
         <div class="box-1" [@boxOneState]="boxOneState">
-            <!-- <div id="login-form">
+            <div id="login-form" [@loginState]="loginState" *ngIf="loginState">
                 <app-login></app-login>
-            </div> -->
+            </div>
 
-            <app-enroll></app-enroll>
-            
+            <div id="enroll" [@enrollState]="enrollState" *ngIf="!loginState">
+                <app-enroll></app-enroll>
+            </div>
+
         </div>
 
         <div class="box-2" [@boxTwoState]="boxTwoState">
-            <div class="spiel">
+            <div class="spiel" *ngIf="loginState">
                 <h1>Hello there!</h1>
                 <p>Enter your details and start your journey with us.</p>
                 <button (click)="onToggleSignUp()">SIGN UP</button>
+            </div>
+
+            <div class="spiel" *ngIf="!loginState">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected, please log in.</p>
+                <button (click)="onToggleSignUp()">SIGN IN</button>
             </div>
             
         </div>

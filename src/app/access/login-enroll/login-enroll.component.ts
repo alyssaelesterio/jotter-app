@@ -43,6 +43,9 @@ import {
 export class LoginEnrollComponent implements OnInit {
   boxOneState = "right";
   boxTwoState = "left";
+  loginState = true;
+  enrollState = false;
+
 
   constructor() { }
 
@@ -53,6 +56,8 @@ export class LoginEnrollComponent implements OnInit {
   onToggleSignUp() {
     this.boxTwoState == 'left' ? this.boxTwoState = 'right' : this.boxTwoState = "left";
     this.boxOneState == 'left' ? this.boxOneState = 'right' : this.boxOneState = "left";
+    this.loginState == true ? this.loginState = false : this.loginState = true;
+  
   }
 
 }
