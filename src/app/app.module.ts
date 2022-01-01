@@ -16,6 +16,7 @@ import { EnrollComponent } from './access/login-enroll/enroll/enroll.component';
 import { ForgotPassComponent } from './access/forgot-pass/forgot-pass.component';
 import { VerificationComponent } from './access/verification/verification.component';
 import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
+import { VerifyComponent } from './access/verification/verify/verify.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
     ForgotPassComponent,
     VerificationComponent,
     ResetPassComponent,
+    VerifyComponent,
   ],
   imports: [
     BrowserModule,
