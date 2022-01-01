@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginEnrollComponent } from './access/login-enroll/login-enroll.component';
 import { EnrollComponent } from './access/login-enroll/enroll/enroll.component';
 import { VerificationComponent } from './access/verification/verification.component';
+import { ForgotPassComponent } from './access/forgot-pass/forgot-pass.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
     },
   },
   { path: 'verify', component: VerificationComponent },
+  { path: 'forgot', component: ForgotPassComponent }
 ];
 
 @NgModule({
