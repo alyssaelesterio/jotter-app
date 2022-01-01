@@ -1,4 +1,4 @@
-<div class="container" id="register">
+<div class="container" id="register" [ngClass]="isDirectlyAccessed() ? 'direct' : 'notDirect'">
     <h1>Create Account</h1>
 
     <div class="login-icons">
