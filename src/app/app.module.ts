@@ -13,6 +13,9 @@ import { FooterComponent } from './home/footer/footer.component';
 import { LoginEnrollComponent } from './access/login-enroll/login-enroll.component';
 import { LoginComponent } from './access/login-enroll/login/login.component';
 import { EnrollComponent } from './access/login-enroll/enroll/enroll.component';
+import { ForgotPassComponent } from './access/forgot-pass/forgot-pass.component';
+import { VerificationComponent } from './access/verification/verification.component';
+import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { EnrollComponent } from './access/login-enroll/enroll/enroll.component';
     LoginEnrollComponent,
     LoginComponent,
     EnrollComponent,
+    ForgotPassComponent,
+    VerificationComponent,
+    ResetPassComponent,
   ],
   imports: [
     BrowserModule,
