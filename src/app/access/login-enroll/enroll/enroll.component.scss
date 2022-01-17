@@ -57,18 +57,22 @@ h1 {
 
 
 form{
-    a{  
-        top: 10px;
+    p{  
+        top: 5px;
         text-align: center;
         position: relative;
     }
 
-    a, input::placeholder {
+    p, a, input::placeholder {
         text-decoration: none;
         font-weight: 300;
         font-size: 13px;
         letter-spacing: 0.03em;
         color: #333333;
+    }
+
+    p, a{
+        font-size: 12px;
     }
 
     a:hover {
