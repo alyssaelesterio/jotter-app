@@ -10,14 +10,13 @@ $specialFont:'Bahnschrift', sans-serif;
 $color3 : #E0563B;
 
 body {
-  min-width: 1366PX;
+  min-width: 1366px;
   margin: auto;
   padding: 0;
-  font-family: $primaryFont;
+  font-family: $primaryFont !important;
   background-color: whitesmoke;
   font-weight: 300;
 }
-
 
 html {
   scroll-behavior: smooth;
