@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +17,10 @@ import { ForgotPassComponent } from './access/forgot-pass/forgot-pass.component'
 import { VerificationComponent } from './access/verification/verification.component';
 import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
 import { VerifyComponent } from './access/verification/verify/verify.component';
+import { TAndCDialogComponent } from './access/login-enroll/t-and-c-dialog/t-and-c-dialog.component';
+
+import { MaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -34,12 +38,19 @@ import { VerifyComponent } from './access/verification/verify/verify.component';
     VerificationComponent,
     ResetPassComponent,
     VerifyComponent,
+    TAndCDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MaterialModule
   ],
+  entryComponents:[
+    TAndCDialogComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

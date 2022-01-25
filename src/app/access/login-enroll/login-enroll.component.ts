@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { loginEnrollAnim } from './login-enroll-animations';
+
 import {
   trigger,
   state,

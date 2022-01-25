@@ -3,15 +3,12 @@ $secondaryColor = #E0563B;
 styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('http://fonts.cdnfonts.com/css/bahnschrift');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 $primaryFont: 'Roboto', sans-serif;
 $specialFont:'Bahnschrift', sans-serif;
-
 $color3 : #E0563B;
 
-
-    
-    
 body {
   min-width: 1366PX;
   margin: auto;
@@ -25,3 +22,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
