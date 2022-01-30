@@ -6,7 +6,7 @@ import { LoginEnrollComponent } from './access/login-enroll/login-enroll.compone
 import { EnrollComponent } from './access/login-enroll/enroll/enroll.component';
 import { VerificationComponent } from './access/verification/verification.component';
 import { ForgotPassComponent } from './access/forgot-pass/forgot-pass.component';
-
+import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginEnrollComponent },
@@ -16,7 +16,8 @@ const routes: Routes = [
     },
   },
   { path: 'verify', component: VerificationComponent },
-  { path: 'forgot', component: ForgotPassComponent }
+  { path: 'forgot', component: ForgotPassComponent },
+  { path: 'reset', component: ResetPassComponent }
 ];
 
 @NgModule({

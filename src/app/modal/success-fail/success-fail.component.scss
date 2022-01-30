@@ -1,0 +1,21 @@
+.container {
+    width: 260px;
+}
+
+button {
+    padding:0;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: transparent;
+    img{
+        height:20px;
+        width: 20px;
+    }
+}
+
+.message {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-align: justify;
+}

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
@@ -18,6 +19,7 @@ import { VerificationComponent } from './access/verification/verification.compon
 import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
 import { VerifyComponent } from './access/verification/verify/verify.component';
 import { TAndCDialogComponent } from './access/login-enroll/t-and-c-dialog/t-and-c-dialog.component';
+import { SuccessFailComponent } from './modal/success-fail/success-fail.component';
 
 import { MaterialModule } from './material.module';
 
@@ -38,6 +40,7 @@ import { MaterialModule } from './material.module';
     VerificationComponent,
     ResetPassComponent,
     VerifyComponent,
+    SuccessFailComponent,
     TAndCDialogComponent,
   ],
   imports: [
@@ -48,7 +51,8 @@ import { MaterialModule } from './material.module';
     MaterialModule
   ],
   entryComponents:[
-    TAndCDialogComponent
+    SuccessFailComponent,
+    TAndCDialogComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
