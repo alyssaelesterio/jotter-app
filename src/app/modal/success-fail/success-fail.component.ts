@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessFailComponent implements OnInit {
   message: string = "We just emailed you with the instructions to reset your password. <br><br>For any questions or problems please email us at  helpdesk@jotter.com";
-
+  title: string = "Check your email";
   constructor() { }
 
   ngOnInit(): void {

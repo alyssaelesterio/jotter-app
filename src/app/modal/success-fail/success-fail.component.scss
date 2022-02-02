@@ -14,8 +14,19 @@ button {
     }
 }
 
+.modal-img, h2 {
+    text-align: center;
+}
+
+.success {
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #B1D07A; 
+}
+
 .message {
-    padding: 10px 20px;
+    padding: 0px 20px;
     font-size: 14px;
     text-align: justify;
 }

@@ -18,8 +18,12 @@ import { ForgotPassComponent } from './access/forgot-pass/forgot-pass.component'
 import { VerificationComponent } from './access/verification/verification.component';
 import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
 import { VerifyComponent } from './access/verification/verify/verify.component';
+
 import { TAndCDialogComponent } from './access/login-enroll/t-and-c-dialog/t-and-c-dialog.component';
 import { SuccessFailComponent } from './modal/success-fail/success-fail.component';
+
+import { UserComponent } from './main/user/user.component';
+import { UserNavComponent } from './main/user-nav/user-nav.component';
 
 import { MaterialModule } from './material.module';
 
@@ -40,8 +44,10 @@ import { MaterialModule } from './material.module';
     VerificationComponent,
     ResetPassComponent,
     VerifyComponent,
+    UserComponent,
     SuccessFailComponent,
     TAndCDialogComponent,
+    UserNavComponent
   ],
   imports: [
     BrowserModule,
