@@ -7,21 +7,17 @@ import { MatDrawer } from '@angular/material/sidenav';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  showFiller = false;
   sideNavOpened:boolean;
+  username: string ="biggiebong13"
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  onToggle() {
-
-  }
-
-
   addItem(item: boolean){
-
     this.sideNavOpened = item;
   }
+
+
 }

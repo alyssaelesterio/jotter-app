@@ -10,15 +10,16 @@ export class UserNavComponent implements OnInit {
   unbounded = true;
 
   radius: number = 40;
-  color: string = "rgb(51, 51, 51, 0.5)";
+  color: string = "rgb(51, 51, 51, 0.30)";
 
   @Output() newItemEvent = new EventEmitter<boolean>();
 
-  isNavOpen = false;
+  isNavOpen:boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.newItemEvent.subscribe(data => console.log(data));
   }
 
 

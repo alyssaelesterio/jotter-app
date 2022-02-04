@@ -9,6 +9,10 @@ $primaryFont: 'Roboto', sans-serif;
 $specialFont:'Bahnschrift', sans-serif;
 $color3 : #E0563B;
 
+* {
+  padding: 0;
+}
+
 body {
   min-width: 1366px;
   margin: auto;
