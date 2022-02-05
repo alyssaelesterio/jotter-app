@@ -24,7 +24,7 @@ export class UserNavComponent implements OnInit {
 
 
   addNewItem() {
-    alert(this.isNavOpen);
+    //alert(this.isNavOpen);
     this.isNavOpen == false ? this.isNavOpen = true : this.isNavOpen = false ;
     this.newItemEvent.emit(this.isNavOpen);
   }

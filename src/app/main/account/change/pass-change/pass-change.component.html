@@ -1,1 +1,34 @@
-<p>pass-change works!</p>
+<div class="container">
+    <form>
+        <h1><b>Change Password</b></h1>
+        <br>
+        <p>To proceed with password change, complete the following fields.</p>
+        <br>
+
+        <div class="field">
+            <span>
+                <img src="assets/images/Password Icon.png">
+                <input type="password" placeholder="Enter Current Password">
+            </span>
+        </div>
+
+        <div class="field">
+            <span>
+                <img src="assets/images/Password Icon.png">
+                <input type="password" placeholder="Enter New Password">
+            </span>
+        </div>
+
+        <div class="field">
+            <span>
+                <img src="assets/images/Password Icon.png">
+                <input type="password" placeholder="Confirm New Password">
+            </span>
+        </div>
+
+        <br>
+        <div class="submit-btn">
+            <input type="submit" class="submit" value="Submit" (click)="onSubmit($event)">
+        </div>
+    </form>
+</div>

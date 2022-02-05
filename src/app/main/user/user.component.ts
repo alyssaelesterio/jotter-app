@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.dialog.open(ChangeComponent, {id: 'jDialog'});
+    //this.dialog.open(ChangeComponent, {panelClass: 'custom-dialog-container', data:'false'})
   }
 
   addItem(item: boolean){
@@ -25,13 +25,12 @@ export class UserComponent implements OnInit {
     this.addItem(this.sideNavOpened);
   }
 
-
   onEmailChange() {
-    this.dialog.open(ChangeComponent);
+    this.dialog.open(ChangeComponent, {panelClass: 'custom-dialog-container', data:true});
   }
 
   onPassChange() {
-    this.dialog.open(ChangeComponent);
+    this.dialog.open(ChangeComponent, {panelClass: 'custom-dialog-container', data:false});
   }
 
 

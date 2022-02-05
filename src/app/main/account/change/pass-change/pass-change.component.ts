@@ -12,4 +12,8 @@ export class PassChangeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  onSubmit(e: any){
+    e.preventDefault();
+  }
 }

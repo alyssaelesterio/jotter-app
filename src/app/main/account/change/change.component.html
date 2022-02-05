@@ -3,6 +3,7 @@
         <img src="assets/images/clip-data-protection 1.png" alt="Forgot Password Image">
     </div>
     <div class="right">
-        <app-email-change></app-email-change>
+        <app-email-change *ngIf="getdialogType()"></app-email-change>
+        <app-pass-change  *ngIf="!getdialogType()"></app-pass-change>
     </div>
 </div>
