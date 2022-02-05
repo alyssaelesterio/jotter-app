@@ -9,6 +9,9 @@ import { ForgotPassComponent } from './access/forgot-pass/forgot-pass.component'
 import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
 
 import { UserComponent } from './main/user/user.component';
+import { NotebooksComponent } from './main/notebooks/notebooks.component';
+import { AllNotesComponent } from './main/all-notes/all-notes.component';
+import { FavoritesComponent } from './main/favorites/favorites.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +24,13 @@ const routes: Routes = [
   { path: 'verify', component: VerificationComponent },
   { path: 'forgot', component: ForgotPassComponent },
   { path: 'reset', component: ResetPassComponent },
-  { path: 'user', component: UserComponent }
+  { path: 'user', component: UserComponent,
+    children: [
+      { path: 'notebooks', component: NotebooksComponent },
+      { path: 'notes', component: AllNotesComponent },
+      { path: 'favorites', component: FavoritesComponent },
+    ]
+  },
 ];
 
 @NgModule({

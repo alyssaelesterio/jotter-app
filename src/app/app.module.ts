@@ -27,6 +27,9 @@ import { UserNavComponent } from './main/account/user-nav/user-nav.component';
 import { ChangeComponent } from './main/account/change/change.component';
 import { EmailChangeComponent } from './main/account/change/email-change/email-change.component';
 import { PassChangeComponent } from './main/account/change/pass-change/pass-change.component';
+import { NotebooksComponent } from './main/notebooks/notebooks.component';
+import { AllNotesComponent } from './main/all-notes/all-notes.component';
+import { FavoritesComponent } from './main/favorites/favorites.component';
 
 import { MaterialModule } from './material.module';
 
@@ -53,7 +56,10 @@ import { MaterialModule } from './material.module';
     UserNavComponent,
     ChangeComponent,
     EmailChangeComponent,
-    PassChangeComponent
+    PassChangeComponent,
+    NotebooksComponent,
+    AllNotesComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

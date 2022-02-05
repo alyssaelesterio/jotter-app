@@ -1,9 +1,7 @@
 <mat-drawer-container class="container" hasBackdrop=true>
-    <app-user-nav  (newItemEvent)="addItem($event)"></app-user-nav>
-
     <mat-drawer mode="over" position="end" [opened]="sideNavOpened" #drawer>
         <button class="back-btn" (click)="onToggleNav()"><img src="assets/images/icons8-back-90 1.png" alt=""></button>
-
+    
         <br><br>
         <div class="dp-ign">
             <img src="assets/images/User Account Link.png" alt="User Account">
@@ -23,10 +21,17 @@
             <p>••••••••••</p>
             <button><img src="assets/images/edit.png" alt="" (click)="onPassChange()"></button>
         </div>
-
-
+    
+    
         <div class="logout">
             <button>Sign Out</button>
         </div>
     </mat-drawer>
+
+    <app-user-nav  (newItemEvent)="addItem($event)"></app-user-nav>
+
+    <section>
+        <router-outlet></router-outlet>
+    </section>
+    
 </mat-drawer-container>
