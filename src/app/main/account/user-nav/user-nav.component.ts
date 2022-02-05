@@ -19,11 +19,12 @@ export class UserNavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.newItemEvent.subscribe(data => console.log(data));
+    //this.newItemEvent.subscribe(data => console.log(data));
   }
 
 
   addNewItem() {
+    alert(this.isNavOpen);
     this.isNavOpen == false ? this.isNavOpen = true : this.isNavOpen = false ;
     this.newItemEvent.emit(this.isNavOpen);
   }

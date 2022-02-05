@@ -23,7 +23,10 @@ import { TAndCDialogComponent } from './access/login-enroll/t-and-c-dialog/t-and
 import { SuccessFailComponent } from './modal/success-fail/success-fail.component';
 
 import { UserComponent } from './main/user/user.component';
-import { UserNavComponent } from './main/user-nav/user-nav.component';
+import { UserNavComponent } from './main/account/user-nav/user-nav.component';
+import { ChangeComponent } from './main/account/change/change.component';
+import { EmailChangeComponent } from './main/account/change/email-change/email-change.component';
+import { PassChangeComponent } from './main/account/change/pass-change/pass-change.component';
 
 import { MaterialModule } from './material.module';
 
@@ -47,7 +50,10 @@ import { MaterialModule } from './material.module';
     UserComponent,
     SuccessFailComponent,
     TAndCDialogComponent,
-    UserNavComponent
+    UserNavComponent,
+    ChangeComponent,
+    EmailChangeComponent,
+    PassChangeComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +65,7 @@ import { MaterialModule } from './material.module';
   entryComponents:[
     SuccessFailComponent,
     TAndCDialogComponent,
+    ChangeComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

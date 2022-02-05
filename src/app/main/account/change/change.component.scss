@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    width: 751px;
+    height: 407px;
+    text-align: center;
+}
+
+
+.right {
+    width: 454px;
+    box-sizing: border-box;
+}
+
+
+.left {
+    display: flex;
+    width: 307px;
+    align-items: center;
+    background: #74919F;
+    img {
+        width: 287px;
+    }
+}
+
+
