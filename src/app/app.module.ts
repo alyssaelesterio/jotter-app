@@ -30,6 +30,7 @@ import { PassChangeComponent } from './main/account/change/pass-change/pass-chan
 import { NotebooksComponent } from './main/notebooks/notebooks.component';
 import { NotebookComponent } from './main/notebooks/notebook/notebook.component';
 import { AllNotesComponent } from './main/all-notes/all-notes.component';
+import { NoteComponent } from './main/all-notes/note/note.component';
 import { FavoritesComponent } from './main/favorites/favorites.component';
 import { NoteFilterComponent } from './main/note-filter/note-filter.component';
 
@@ -62,6 +63,7 @@ import { MaterialModule } from './material.module';
     NotebooksComponent,
     NotebookComponent,
     AllNotesComponent,
+    NoteComponent,
     FavoritesComponent,
     NoteFilterComponent
   ],
