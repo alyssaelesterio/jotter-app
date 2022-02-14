@@ -5,19 +5,12 @@
 }
 
 ul{
-    
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     list-style: none;    
-    flex-direction: row;
+    grid-template-columns: repeat(4, 1fr);
     li {
         margin: 20px 23px;
         min-width: 300px;
-        flex-basis: 300px;
     }
-    li:last-child{
-        flex-grow: 1;
-    }
-
 }
 
