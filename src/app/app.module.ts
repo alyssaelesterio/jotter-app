@@ -27,12 +27,19 @@ import { UserNavComponent } from './main/account/user-nav/user-nav.component';
 import { ChangeComponent } from './main/account/change/change.component';
 import { EmailChangeComponent } from './main/account/change/email-change/email-change.component';
 import { PassChangeComponent } from './main/account/change/pass-change/pass-change.component';
+
 import { NotebooksComponent } from './main/notebooks/notebooks.component';
 import { NotebookComponent } from './main/notebooks/notebook/notebook.component';
+
 import { AllNotesComponent } from './main/all-notes/all-notes.component';
 import { NoteComponent } from './main/all-notes/note/note.component';
 import { FavoritesComponent } from './main/favorites/favorites.component';
 import { NoteFilterComponent } from './main/note-filter/note-filter.component';
+
+import { ToolsComponent } from './main/notebooks/tools/tools.component';
+import { CreateEditComponent } from './main/notebooks/tools/create-edit/create-edit.component';
+import { DeleteNbComponent } from './main/notebooks/tools/delete-nb/delete-nb.component';
+
 
 import { MaterialModule } from './material.module';
 
@@ -65,7 +72,10 @@ import { MaterialModule } from './material.module';
     AllNotesComponent,
     NoteComponent,
     FavoritesComponent,
-    NoteFilterComponent
+    NoteFilterComponent,
+    ToolsComponent,
+    CreateEditComponent,
+    DeleteNbComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +87,8 @@ import { MaterialModule } from './material.module';
   entryComponents:[
     SuccessFailComponent,
     TAndCDialogComponent,
-    ChangeComponent
+    ChangeComponent,
+    ToolsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

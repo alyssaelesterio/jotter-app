@@ -20,11 +20,8 @@ export class NotebookComponent implements OnInit {
   }
 
 
-
   onHover() {
-    //alert('hover working');
-    console.log('test');
     this.triggerFx = this.triggerFx ? false : true;
-    console.log(this.triggerFx);
   }
+
 }
