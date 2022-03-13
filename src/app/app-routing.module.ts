@@ -11,7 +11,7 @@ import { ResetPassComponent } from './access/reset-pass/reset-pass.component';
 import { UserComponent } from './main/user/user.component';
 import { NotebooksComponent } from './main/notebooks/notebooks.component';
 import { AllNotesComponent } from './main/all-notes/all-notes.component';
-import { FavoritesComponent } from './main/favorites/favorites.component';
+import { FavoritesComponent } from './main/all-notes/favorites/favorites.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,9 +26,26 @@ const routes: Routes = [
   { path: 'reset', component: ResetPassComponent },
   { path: 'user', component: UserComponent,
     children: [
-      { path: 'notebooks', component: NotebooksComponent },
-      { path: 'notes', component: AllNotesComponent },
-      { path: 'favorites', component: FavoritesComponent },
+      { path: 'notebooks', 
+        component: NotebooksComponent, 
+        data: {
+          type: 1
+        }
+      },
+
+      { path: 'notes', 
+        component: AllNotesComponent, 
+        data : {
+          type: 2
+        }
+      },
+
+      { path: 'favorites', 
+        component: FavoritesComponent,
+        data:{
+          type: 3
+        } 
+      },
     ]
   },
 ];

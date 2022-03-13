@@ -33,13 +33,12 @@ import { NotebookComponent } from './main/notebooks/notebook/notebook.component'
 
 import { AllNotesComponent } from './main/all-notes/all-notes.component';
 import { NoteComponent } from './main/all-notes/note/note.component';
-import { FavoritesComponent } from './main/favorites/favorites.component';
-import { NoteFilterComponent } from './main/note-filter/note-filter.component';
+import { FavoritesComponent } from './main/all-notes/favorites/favorites.component';
+import { NoteFilterComponent } from './main/nbfx/note-filter/note-filter.component'
 
-import { ToolsComponent } from './main/notebooks/tools/tools.component';
-import { CreateEditComponent } from './main/notebooks/tools/create-edit/create-edit.component';
-import { DeleteNbComponent } from './main/notebooks/tools/delete-nb/delete-nb.component';
-
+import { NbToolsComponent } from './main/nbfx/nb-tools/nb-tools.component';
+import { CreateditComponent } from './main/nbfx/nb-tools/createdit/createdit.component';
+import { DeleteComponent } from './main/nbfx/nb-tools/delete/delete.component';
 
 import { MaterialModule } from './material.module';
 
@@ -73,9 +72,9 @@ import { MaterialModule } from './material.module';
     NoteComponent,
     FavoritesComponent,
     NoteFilterComponent,
-    ToolsComponent,
-    CreateEditComponent,
-    DeleteNbComponent
+    NbToolsComponent,
+    CreateditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +87,7 @@ import { MaterialModule } from './material.module';
     SuccessFailComponent,
     TAndCDialogComponent,
     ChangeComponent,
-    ToolsComponent
+    NbToolsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

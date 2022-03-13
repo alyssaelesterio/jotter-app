@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-notebooks',
   templateUrl: './notebooks.component.html',
@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotebooksComponent implements OnInit {
   sideNavOpened: boolean;
-  constructor() { }
+
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.sideNavOpened=true
+    console.log(this.activatedRoute.data);
+    this.activatedRoute.data.subscribe(data => console.log(data));
   }
 
  

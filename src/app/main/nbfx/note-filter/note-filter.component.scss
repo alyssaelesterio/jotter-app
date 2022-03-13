@@ -12,7 +12,6 @@ h1, .filter-fx {
     padding: 0;
     line-height: 30px;
     font-size: 20px;
-
     font-family: 'Raleway', 'Roboto', sans-serif;
 }
 
@@ -43,6 +42,11 @@ h1, .filter-fx {
     transform: translateY(4px);
 }
 
+#search:active{
+    transform: none;
+    box-shadow: none;
+}
+
 .search {
     display: flex;
     align-items: center;
@@ -55,7 +59,8 @@ h1, .filter-fx {
         padding: 0 5px;
         font-size: 15px;
         border: transparent;
-        //outline: 0.5px solid #ccc;
+        outline: none;
         font-family: 'Raleway', 'Roboto', sans-serif;
     }
 }
+
