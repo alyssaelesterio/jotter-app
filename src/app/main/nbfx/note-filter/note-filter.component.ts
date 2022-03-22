@@ -32,7 +32,7 @@ export class NoteFilterComponent implements OnInit {
       NbToolsComponent,
       {
         panelClass:'modal',
-        data: {type: 'create'}
+        data: {type: 'Create'}
     });
   }
 }

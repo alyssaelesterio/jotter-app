@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef, ViewChild, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -19,6 +19,7 @@ export class CreateditComponent implements OnInit {
 
   @ViewChild('cover') cover:ElementRef;
 
+  @Input('headerTitle') headerTitle:ElementRef;
 
   constructor(private renderer: Renderer2,
     private elementRef: ElementRef) { }
@@ -34,9 +35,6 @@ export class CreateditComponent implements OnInit {
     const reader = new FileReader();
     console.log(reader.readAsDataURL(fileInput))
     //this.renderer.setStyle(this.cover.nativeElement, 'backgroundImage', );
-
-  
-    
   }
 
   onTriggerFileUpload() {

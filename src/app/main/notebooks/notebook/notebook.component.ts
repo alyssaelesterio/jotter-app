@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { NbToolsComponent  } from '../../nbfx/nb-tools/nb-tools.component'; 
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-notebook',
@@ -14,7 +17,13 @@ export class NotebookComponent implements OnInit {
   radius: number = 25;
   color: string = "rgb(255, 255, 255, 0.30)";
 
-  constructor() { }
+  //MAT_DIALOG_DATA: InjectionToken<any>;
+  //@Inject(MAT_DIALOG_DATA) public data: any
+
+  constructor(
+    private dialog: MatDialog,
+    private activatedRoute: ActivatedRoute) { }
+  toolType: any;
 
   ngOnInit(): void {
   }
@@ -22,6 +31,22 @@ export class NotebookComponent implements OnInit {
 
   onHover() {
     this.triggerFx = this.triggerFx ? false : true;
+  }
+
+
+  // Pass on ID as param
+  onEditNb() {
+    this.activatedRoute.data.subscribe(data => {
+      console.log(data)
+      this.toolType = data;
+    })
+
+    this.dialog.open(NbToolsComponent,
+      {
+        panelClass:'modal',
+        data: {type: 'Edit'}
+    });
+
   }
 
 }
