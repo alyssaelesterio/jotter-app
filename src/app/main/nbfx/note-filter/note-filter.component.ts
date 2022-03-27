@@ -14,6 +14,8 @@ export class NoteFilterComponent implements OnInit {
 
   @Input() pageTitle: string;
 
+  @Input() filterMenu: any;
+
   constructor(private dialog: MatDialog, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {

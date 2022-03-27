@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllNotesComponent implements OnInit {
   title:string = "All Notes";
+  filterMenu = {
+    'search' : true,
+    'addButton' : true,
+    'title' : 'Note',
+    'sort' : true
+  }
 
   constructor() { }
 

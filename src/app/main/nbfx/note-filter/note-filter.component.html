@@ -7,7 +7,10 @@
             <input type="text" placeholder="Search">
         </div>
 
-        <button class="filter-item" (click)="onOpenTool()" ><mat-icon>add</mat-icon> Notebook</button>
+        <button 
+            *ngIf="filterMenu['addButton']"
+            class="filter-item" 
+            (click)="onOpenTool()" ><mat-icon>add</mat-icon> {{ filterMenu['title'] }} </button>
         
         <button class="filter-item" [matMenuTriggerFor]="sortMenu"><mat-icon>sort</mat-icon> Sort</button>
 

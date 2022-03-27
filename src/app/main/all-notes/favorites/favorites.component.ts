@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class FavoritesComponent implements OnInit {
   title:string = "Favorites";
 
+  filterMenu = {
+    'search' : true,
+    'addButton' : false,
+    'title' : 'Favorites',
+    'sort' : true
+  }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -9,7 +9,13 @@ export class NotebooksComponent implements OnInit {
   sideNavOpened: boolean;
   title:string = "Notebooks";
 
-  
+  filterMenu = {
+    'search' : true,
+    'addButton' : true,
+    'title' : 'Notebook',
+    'sort' : true
+  }
+
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
