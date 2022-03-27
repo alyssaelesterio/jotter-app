@@ -49,4 +49,18 @@ export class NotebookComponent implements OnInit {
 
   }
 
+
+  onDeleteNb() {
+    this.activatedRoute.data.subscribe(data => {
+      console.log(data)
+      this.toolType = data;
+    })
+
+    this.dialog.open(NbToolsComponent,
+      {
+        panelClass:'modal',
+        data: {type: 'Delete'}
+    });
+  }
+
 }

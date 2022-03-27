@@ -1,4 +1,9 @@
 <div class="modal wrapper">
-    <app-createdit [headerTitle]="headerTitle"></app-createdit>
-    <!-- <app-delete></app-delete> -->
+
+    <app-createdit 
+        *ngIf="!determineNbTool()"
+        [headerTitle]="headerTitle" ></app-createdit>
+
+    <app-delete *ngIf="determineNbTool()"></app-delete>
+
 </div>

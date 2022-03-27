@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-nb-tools',
@@ -12,14 +13,33 @@ export class NbToolsComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialog: MatDialog) {
+    public dialog: MatDialog,
+    private activatedRoute: ActivatedRoute) {
       this.headerTitle = data.type;
       console.log(this.headerTitle);
-
+      
+      
     }
 
   ngOnInit(): void {
-    
+    //this.determineNbTool();
+
+    // this.activatedRoute.data.subscribe(data => {
+    //   console.log(data)
+    //   this.toolType = data;
+    // })
+  }
+
+  determineNbTool() {
+    if(!this.headerTitle){
+      return;
+    }
+
+    if(this.headerTitle.toLowerCase() == 'delete'){
+      return true;
+    }
+    else
+      return false;
   }
 
 }
