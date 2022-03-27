@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./all-notes.component.scss']
 })
 export class AllNotesComponent implements OnInit {
+  title:string = "All Notes";
 
   constructor() { }
 

@@ -7,8 +7,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class NotebooksComponent implements OnInit {
   sideNavOpened: boolean;
+  title:string = "Notebooks";
 
-
+  
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {

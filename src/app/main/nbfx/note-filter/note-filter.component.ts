@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { NbToolsComponent } from '../nb-tools/nb-tools.component';
 import { toolType } from 'src/app/models/toolType';
-import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-note-filter',
@@ -13,6 +12,8 @@ import { style } from '@angular/animations';
 export class NoteFilterComponent implements OnInit {
   toolType: toolType;
 
+  @Input() pageTitle: string;
+
   constructor(private dialog: MatDialog, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -20,6 +21,7 @@ export class NoteFilterComponent implements OnInit {
       console.log(data)
       this.toolType = data;
     })
+
   }
 
   onOpenTool() {
