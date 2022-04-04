@@ -1,34 +1,46 @@
 <mat-drawer-container class="container" hasBackdrop=true>
-    <mat-drawer mode="over" position="end" [opened]="sideNavOpened" #drawer>
-        <button class="back-btn" (click)="onToggleNav()"><img src="assets/images/icons8-back-90 1.png" alt=""></button>
+    <mat-drawer 
+        mode="over" 
+        position="end" 
+        [opened]="drawerState" 
+        #sidenav >
+
+        <button class="back-btn" 
+            (click)="sidenav.toggle()">
+            <img src="assets/images/icons8-back-90 1.png" alt=""></button>
     
         <br><br>
-        <div class="dp-ign">
-            <img src="assets/images/User Account Link.png" alt="User Account">
-            <p>{{ username }}</p>
-        </div>
-        
-        <br><hr><br>
-        
-        <div class="field">
-            <p>Email Address</p>
-            <p>noitsbecky@gmail.com</p>
-            <button><img src="assets/images/edit.png" alt="" (click)="onEmailChange()"></button>
-        </div>
-        
-        <div class="field">
-            <p>Password</p>
-            <p>••••••••••</p>
-            <button><img src="assets/images/edit.png" alt="" (click)="onPassChange()"></button>
-        </div>
-    
-    
-        <div class="logout">
-            <button>Sign Out</button>
-        </div>
+        <form>
+            <div class="dp-ign">
+                <img src="assets/images/User Account Link.png" alt="User Account">
+                <p>{{ username }}</p>
+            </div>
+            
+            <br><hr><br>
+            
+            <div class="field">
+                <p>Email Address</p>
+                <p>noitsbecky@gmail.com</p>
+                <button><img src="assets/images/edit.png" alt="" (click)="onEmailChange()"></button>
+            </div>
+            
+            <div class="field">
+                <p>Password</p>
+                <p>••••••••••</p>
+                <button><img src="assets/images/edit.png" alt="" (click)="onPassChange()"></button>
+            </div>
+
+            <div class="logout">
+                <button>Sign Out</button>
+            </div>
+        </form>
     </mat-drawer>
 
-    <app-user-nav  (newItemEvent)="addItem($event)"></app-user-nav>
+    <app-user-nav 
+        (sidenav)="sidenav.toggle()"
+        [drawerState]="drawerState"></app-user-nav>
+
+
 
     <section>
         <router-outlet></router-outlet>

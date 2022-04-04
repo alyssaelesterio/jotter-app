@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
@@ -13,22 +13,22 @@ export class UserNavComponent implements OnInit {
   radius: number = 40;
   color: string = "rgb(51, 51, 51, 0.30)";
 
-  @Output() newItemEvent = new EventEmitter<boolean>();
-
   isNavOpen:boolean = false;
+
+  @Output() sidenav: EventEmitter<any> = new EventEmitter();
+
+  @Input('drawerState') drawerState: boolean;
+
 
   constructor() { }
 
   ngOnInit(): void {
-    //this.newItemEvent.subscribe(data => console.log(data));
   }
 
 
-  addNewItem() {
-    //alert(this.isNavOpen);
-    this.isNavOpen == false ? this.isNavOpen = true : this.isNavOpen = false ;
-    this.newItemEvent.emit(this.isNavOpen);
+  toggle() {
+    this.sidenav.emit();
   }
 
-  
+
 }

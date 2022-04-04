@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ChangeComponent } from '../account/change/change.component';
 @Component({
@@ -9,20 +9,23 @@ import { ChangeComponent } from '../account/change/change.component';
 export class UserComponent implements OnInit {
   sideNavOpened:boolean;
   username: string ="biggiebong13"
-  
+
+  drawerState:boolean = false;
+
+
+
   constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
     //this.dialog.open(ChangeComponent, {panelClass: 'custom-dialog-container', data:'false'})
   }
 
-  addItem(item: boolean){
-    this.sideNavOpened = item;
-  }
+  
 
   onToggleNav() {
-    this.sideNavOpened == false ? this.sideNavOpened = true : this.sideNavOpened = false ;
-    this.addItem(this.sideNavOpened);
+    console.log('onToggleNav', this.drawerState);
+    this.drawerState == false ? this.drawerState = true : this.drawerState = false ;
+    this.addItem(this.drawerState);
   }
 
   onEmailChange() {
@@ -31,6 +34,11 @@ export class UserComponent implements OnInit {
 
   onPassChange() {
     this.dialog.open(ChangeComponent, {panelClass: 'custom-dialog-container', data:false});
+  }
+
+
+  addItem(item: boolean){
+    this.drawerState = item;
   }
 
 

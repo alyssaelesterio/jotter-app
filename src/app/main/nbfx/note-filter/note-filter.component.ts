@@ -20,7 +20,6 @@ export class NoteFilterComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(data => {
-      console.log(data)
       this.toolType = data;
     })
 
