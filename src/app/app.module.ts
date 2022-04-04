@@ -34,14 +34,17 @@ import { NotebookComponent } from './main/notebooks/notebook/notebook.component'
 import { AllNotesComponent } from './main/all-notes/all-notes.component';
 import { NoteComponent } from './main/all-notes/note/note.component';
 import { FavoritesComponent } from './main/all-notes/favorites/favorites.component';
-import { NoteFilterComponent } from './main/nbfx/note-filter/note-filter.component'
 
 import { NbToolsComponent } from './main/nbfx/nb-tools/nb-tools.component';
+import { NoteFilterComponent } from './main/nbfx/note-filter/note-filter.component';
+import { TextEditorComponent } from './main/nbfx/text-editor/text-editor.component';
 import { CreateditComponent } from './main/nbfx/nb-tools/createdit/createdit.component';
 import { DeleteComponent } from './main/nbfx/nb-tools/delete/delete.component';
 
+
 import { MaterialModule } from './material.module';
 
+import { QuillModule } from 'ngx-quill'
 
 @NgModule({
   declarations: [
@@ -74,20 +77,25 @@ import { MaterialModule } from './material.module';
     NoteFilterComponent,
     NbToolsComponent,
     CreateditComponent,
-    DeleteComponent
+    DeleteComponent,
+    TextEditorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    QuillModule.forRoot({
+      suppressGlobalRegisterWarning: true
+    })
   ],
   entryComponents:[
     SuccessFailComponent,
     TAndCDialogComponent,
     ChangeComponent,
-    NbToolsComponent
+    NbToolsComponent,
+    TextEditorComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

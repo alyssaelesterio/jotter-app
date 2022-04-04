@@ -26,6 +26,11 @@ const routes: Routes = [
   { path: 'reset', component: ResetPassComponent },
   { path: 'user', component: UserComponent,
     children: [
+      {
+        path:'',
+        redirectTo: 'notebooks',
+        pathMatch: 'full' 
+      },
       { path: 'notebooks', 
         component: NotebooksComponent, 
         data: {

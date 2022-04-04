@@ -16,9 +16,7 @@ export class NbToolsComponent implements OnInit {
     public dialog: MatDialog,
     private activatedRoute: ActivatedRoute) {
       this.headerTitle = data.type;
-      console.log(this.headerTitle);
-      
-      
+      console.log(this.headerTitle); 
     }
 
   ngOnInit(): void {
