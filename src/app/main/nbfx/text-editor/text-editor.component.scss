@@ -1,13 +1,14 @@
+
 .container {
     height: 93vh;
     box-sizing: border-box;
-    //border: 1px solid plum;
+    padding: 2% 0 0;
 }
 
 .header {
     display: flex;
     text-align: center;
-    //border:1px solid salmon;
+    
     button {
         width: 3%;
         //border:1px solid black;
@@ -23,13 +24,16 @@
         width: 97%;
         margin: auto;
     }
+
     input {
         line-height: 30px;
-        font-size: 20px;
+        font-size: 25px;
         margin: auto auto auto -3%;
         text-align: center;
         width: 90%;
         border: none;
+        font-family: 'Raleway', 'Roboto';
+        font-weight: 500;
     }
 
     input:focus{
@@ -39,8 +43,56 @@
 
 
 .body {
-    margin: 50px auto;
-    padding:auto 100px;
-    width:85%;
+    margin: 40px auto 0;
+    padding: auto 100px;
+    width: 90%;
+}
 
+.header, .body {
+    padding: 0 30px;
+}
+
+
+.footer {
+    height: 86px; 
+    bottom: 0;
+    width: 985px;
+    margin: auto;
+    position: absolute;
+    background: #FAFAFA;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    .wrap {
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+
+    button{
+        height: 35px;
+        width: 35px;
+        margin: auto 15px;
+        background: transparent;
+        border: transparent;
+
+        
+    }
+
+    .divider {
+        width: 0;
+        height: 39px;
+        border: 1px solid #000000;
+        background-color: #000000;
+        margin: auto 20px;
+    }
+}
+
+.ql-container.ql-snow {
+    border: transparent;
 }

@@ -46,7 +46,7 @@ export class NoteFilterComponent implements OnInit {
     }
     
     if(this.toolType.type == 2){
-      this.dialog.open(TextEditorComponent,{panelClass:'editor'});
+      this.dialog.open(TextEditorComponent,{id:'editor'});
     }
   }
 

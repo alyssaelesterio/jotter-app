@@ -15,6 +15,27 @@
     </div>
 
     <div class="body">
-        <quill-editor [styles]="{height: '500px'}"></quill-editor>
+        <quill-editor 
+            [styles]="{height: '420px'}"
+            (onEditorChanged)="changedEditor($event)"></quill-editor>
+    </div>
+
+   
+    <div class="footer">
+        <div class="wrap">
+            <button><img src="assets/images/Delete.png" alt=""></button>
+            <button><img src="assets/images/Save.png" alt=""></button>
+
+            <div class="divider"></div>
+
+            <button><img src="assets/images/Print.png" alt=""></button>
+            <button><img src="assets/images/Move To.png" alt=""></button>
+            <button><img src="assets/images/Copy To.png" alt=""></button>
+
+            <div class="divider"></div>
+
+            <button><img src="assets/images/Favorite.png" alt=""></button>
+            <button><img src="assets/images/Color Picker.png" alt=""></button>
+        </div>
     </div>
 </div>

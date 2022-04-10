@@ -17,4 +17,9 @@ export class TextEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  changedEditor(e: any) {
+    console.log(e);
+  }
+
 }
