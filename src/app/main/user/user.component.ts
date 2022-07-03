@@ -28,11 +28,13 @@ export class UserComponent implements OnInit {
     this.addItem(this.drawerState);
   }
 
-  onEmailChange() {
+  onEmailChange(e: Event) {
+    e.preventDefault();
     this.dialog.open(ChangeComponent, {panelClass: 'custom-dialog-container', data:true});
   }
 
-  onPassChange() {
+  onPassChange(e: Event) {
+    e.preventDefault();
     this.dialog.open(ChangeComponent, {panelClass: 'custom-dialog-container', data:false});
   }
 

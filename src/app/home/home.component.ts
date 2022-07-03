@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular
 })
 export class HomeComponent implements OnInit {
   sticky: boolean = false;
-
+  
   constructor() { }
 
   ngOnInit(): void {

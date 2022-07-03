@@ -16,8 +16,8 @@ export class ChangeComponent implements OnInit {
     private dialog: MatDialog,
     private dialogRef: MatDialogRef<ChangeComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any) {
-
-      this.dialogType = data
+      console.log(this.dialogType);
+      this.dialogType = data;
     }
 
   ngOnInit(): void {

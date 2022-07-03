@@ -9,7 +9,9 @@
             (click)="sidenav.toggle()">
             <img src="assets/images/icons8-back-90 1.png" alt=""></button>
     
-        <br><br>
+        <br>
+        <br>
+
         <form>
             <div class="dp-ign">
                 <img src="assets/images/User Account Link.png" alt="User Account">
@@ -21,13 +23,13 @@
             <div class="field">
                 <p>Email Address</p>
                 <p>noitsbecky@gmail.com</p>
-                <button><img src="assets/images/edit.png" alt="" (click)="onEmailChange()"></button>
+                <button><img src="assets/images/edit.png" alt="" (click)="onEmailChange($event)"></button>
             </div>
             
             <div class="field">
                 <p>Password</p>
                 <p>••••••••••</p>
-                <button><img src="assets/images/edit.png" alt="" (click)="onPassChange()"></button>
+                <button><img src="assets/images/edit.png" alt="" (click)="onPassChange($event)"></button>
             </div>
         </form>
 

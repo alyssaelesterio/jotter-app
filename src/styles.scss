@@ -1,11 +1,12 @@
 /* You can add global
 $secondaryColor = #E0563B;
 styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
-@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');\
+//@import '~quill/dist/quill.snow.css';
+
+@import url('https://fonts.cdnfonts.com/css/bahnschrift');
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import '~quill/dist/quill.snow.css';
 
 
 $primaryFont: 'Roboto', sans-serif;
@@ -17,12 +18,12 @@ $color3 : #E0563B;
 }
 
 body {
-  min-width: 1366px;
-  margin: auto;
+  margin: 0;
   padding: 0;
+  font-weight: 300;
+  min-width: 1366px;
   font-family: $primaryFont !important;
   background-color: whitesmoke;
-  font-weight: 300;
 }
 
 html, body { 
@@ -30,9 +31,6 @@ html, body {
   height: 100%; 
 }
 
-body {
-  margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; 
-}
 
 ::ng-deep mat-dialog-container {
   border-radius: 20px !important;
@@ -104,3 +102,6 @@ input.submit {
   padding: 0px !important;
   border-radius: 0px !important;
 }
+
+
+.ql-toolbar.ql-snow, .ql-editor ql-blank { border: none !important;}
