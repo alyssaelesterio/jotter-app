@@ -1,14 +1,13 @@
-
 .container {
-    height: 93vh;
-    box-sizing: border-box;
-    padding: 2% 0 0;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 2% 0 0;
 }
 
 .header {
     display: flex;
     text-align: center;
-    
+
     button {
         width: 3%;
         //border:1px solid black;
@@ -52,47 +51,56 @@
     padding: 0 30px;
 }
 
-
-.footer {
-    height: 86px; 
-    bottom: 0;
-    width: 985px;
-    margin: auto;
-    position: absolute;
-    background: #FAFAFA;
-    border: 1px solid #C4C4C4;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-
-    .wrap {
-        width: fit-content;
-        margin: auto;
-        text-align: center;
-        display: flex;
-        text-align: center;
-        align-items: center;
-    }
-
-    button{
-        height: 35px;
-        width: 35px;
-        margin: auto 15px;
-        background: transparent;
-        border: transparent;
-
-        
-    }
-
-    .divider {
-        width: 0;
-        height: 39px;
-        border: 1px solid #000000;
-        background-color: #000000;
-        margin: auto 20px;
-    }
+#color-picker {
+  opacity: 0;
 }
 
 .ql-container.ql-snow {
-    border: transparent;
+  border: transparent;
 }
+
+#title, .footer, .wrap{
+  background-color: transparent;
+}
+
+.footer {
+  height: 86px;
+  bottom: 0;
+  width: 985px;
+  margin: auto;
+  position: absolute;
+  background: none;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  .wrap {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+
+  button{
+    height: 35px;
+    width: 35px;
+    margin: auto 15px;
+    background: transparent;
+    border: transparent;
+  }
+
+  .divider {
+    width: 0;
+    height: 39px;
+    border: 1px solid #000000;
+    background-color: #000000;
+    margin: auto 20px;
+  }
+}
+
+
+
+

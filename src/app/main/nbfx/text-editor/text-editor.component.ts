@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-text-editor',
@@ -12,14 +13,42 @@ export class TextEditorComponent implements OnInit {
   radius: number = 30;
   color: string = "rgb(51, 51, 51, 0.30)";
 
-  constructor() { }
+  noteForm: FormGroup;
+  formBackground: string;
+
+  @ViewChild('colorPicker') colorPicker: ElementRef;
+
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.noteForm = this.fb.group({
+      noteTitle: '',
+      color: '#fff'
+    });
   }
 
+
+  onSubmit(noteData: any){
+    console.log(noteData);
+  }
 
   changedEditor(e: any) {
-    console.log(e);
+    //console.log(e);
   }
+
+  openColorPicker(e:any) {
+    e.preventDefault();
+    this.colorPicker.nativeElement.click();
+
+  }
+
+  onColorChange(color: any){
+    console.log(color);
+  };
+
+
+
 
 }
