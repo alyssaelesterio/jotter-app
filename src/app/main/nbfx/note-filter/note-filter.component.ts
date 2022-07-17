@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { NbToolsComponent } from '../nb-tools/nb-tools.component';
 import { TextEditorComponent } from '../text-editor/text-editor.component';
-import { toolType } from 'src/app/models/toolType';
+import { toolType } from 'src/app/_models/toolType';
 
 @Component({
   selector: 'app-note-filter',
@@ -18,7 +18,7 @@ export class NoteFilterComponent implements OnInit {
   @Input() filterMenu: any;
 
   constructor(
-    private dialog: MatDialog, 
+    private dialog: MatDialog,
     private activatedRoute: ActivatedRoute) { }
 
 
@@ -44,7 +44,7 @@ export class NoteFilterComponent implements OnInit {
           data: {type: 'Create'}
       });
     }
-    
+
     if(this.toolType.type == 2){
       this.dialog.open(TextEditorComponent,{id:'editor'});
     }

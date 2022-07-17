@@ -1,8 +1,8 @@
 /* You can add global
 $secondaryColor = #E0563B;
 styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500&display=swap');
 //@import '~quill/dist/quill.snow.css';
 
 @import url('https://fonts.cdnfonts.com/css/bahnschrift');
@@ -48,6 +48,7 @@ html, body {
 
 .field{
   margin: 10px auto;
+
   span {
     img {
       height: 25px;
@@ -105,3 +106,9 @@ input.submit {
 
 
 .ql-toolbar.ql-snow, .ql-editor ql-blank { border: none !important;}
+
+
+.field-error {
+  color:  #ff0000;
+  font-size: small;
+}

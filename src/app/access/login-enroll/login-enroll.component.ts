@@ -45,8 +45,7 @@ import {
         }),
         animate(1000)
       ])
-    ]),
-
+    ])
   ] //end of animation
 })
 export class LoginEnrollComponent implements OnInit {
@@ -68,6 +67,11 @@ export class LoginEnrollComponent implements OnInit {
     this.boxOneState == 'left' ? this.boxOneState = 'right' : this.boxOneState = "left";
     this.loginState == true ? this.loginState = false : this.loginState = true;
   }
+
+  ngAfterViewInIt() {
+    console.log('view in it');
+  }
+
 
 }
 

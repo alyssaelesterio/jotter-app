@@ -2,11 +2,11 @@
   <div class="box" [@containerState]="containerState">
     <div class="box-1" [@boxOneState]="boxOneState">
 
-      <div id="login-form" [@loginState]="loginState" *ngIf="loginState">
+      <div id="login-form" *ngIf="loginState">
         <app-login></app-login>
       </div>
 
-      <div id="enroll" [@enrollState]="enrollState" *ngIf="!loginState">
+      <div id="enroll" *ngIf="!loginState">
         <app-enroll></app-enroll>
       </div>
 

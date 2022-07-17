@@ -15,6 +15,9 @@
       <span>
         <img src="assets/images/account.png" alt="" id="user">
         <input type="text" placeholder="Username" formControlName="username">
+        <div *ngIf = "submitted && f['username'].errors?.['required']" class="field-error">
+          Field is required
+        </div>
       </span>
     </div>
 

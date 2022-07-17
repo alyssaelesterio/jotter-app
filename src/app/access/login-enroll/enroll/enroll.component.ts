@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { TAndCDialogComponent } from '../t-and-c-dialog/t-and-c-dialog.component';
-import { user } from 'src/app/models/user';
+import { AccessService } from 'src/app/services/access.service';
+import { user } from 'src/app/_models/user';
 
 @Component({
   selector: 'app-enroll',
@@ -11,18 +12,21 @@ import { user } from 'src/app/models/user';
   styleUrls: ['./enroll.component.scss']
 })
 export class EnrollComponent implements OnInit {
-  testRoute: any;
-  enrollForm: FormGroup;
   hide = true;
   chide = true;
+  testRoute: any;
+  enrollForm: FormGroup;
+  submitted: boolean = false;
 
   constructor(
     public dialog: MatDialog,
     private fb: FormBuilder,
+    private access: AccessService,
     private activatedroute:ActivatedRoute) { }
 
 
   ngOnInit(): void {
+
     this.activatedroute.data.subscribe(data => this.testRoute = data);
     //alert(this.testRoute['onManualRedirect']);
 
@@ -32,11 +36,31 @@ export class EnrollComponent implements OnInit {
       "password":"test3321
     */
     this.enrollForm = this.fb.group({
-      username: '',
-      email: '',
-      password: '',
-      cpassword: ''
-    })
+      username: [
+        '',
+        Validators.required,
+      ],
+      email: [
+        '',
+        Validators.required,
+        Validators.email
+      ],
+      password:  [
+        '',
+        Validators.required,
+      ],
+      cpassword:  [
+        '',
+        Validators.required,
+      ],
+    });
+    this.hide =true;
+    console.log('hide', this.hide);
+  }
+
+
+  get f() {
+    return this.enrollForm.controls;
   }
 
 
@@ -51,8 +75,12 @@ export class EnrollComponent implements OnInit {
 
 
   onRegister(enrollForm: user) {
-    console.log(enrollForm);
+
+    this.submitted = true;
+
+    //this.access.onRegister(enrollForm); : { [key: string]: AbstractControl }
   }
+
 
 
 
